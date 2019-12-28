@@ -9,6 +9,9 @@ import 'amfe-flexible'
 // 组件库  插件形态
 import Vant, { Lazyload } from 'vant'
 import 'vant/lib/index.less'
+// 引入饿了么的组件
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 
 // 覆盖vant的样式
 import '@/styles/index.less'
@@ -17,6 +20,7 @@ import '@/styles/index.less'
 import plugin from '@/utils/plugin'
 Vue.use(plugin)
 
+Vue.use(ElementUI)
 Vue.use(Vant)
 Vue.use(Lazyload)
 
