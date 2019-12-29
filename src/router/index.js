@@ -14,6 +14,8 @@ const Login = () => import('@/views/user/Login')
 const Search = () => import('@/views/search/Index')
 const SearchResult = () => import('@/views/search/Result')
 const Article = () => import('@/views/home/Article')
+const Findman = () => import('@/views/find/findman')
+const wantbx = () => import('@/views/find/wantbx')
 
 Vue.use(VueRouter)
 
@@ -31,7 +33,10 @@ const routes = [
       // 视频
       { path: '/video', name: 'video', component: Video },
       // 我的 个人中心
-      { path: '/user', name: 'user', component: User }
+      { path: '/user', name: 'user', component: User },
+      // Findman
+      { path: '/findman', name: 'findman', component: Findman },
+      { path: '/wantbx', name: 'wantbx', component: wantbx }
     ]
   },
   // 编辑资料
@@ -47,7 +52,6 @@ const routes = [
   // 文章详情
   { path: '/article/:id', name: 'article', component: Article, meta: { isKeepAlive: true } }
 ]
-
 const router = new VueRouter({
   routes
 })
